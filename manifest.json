@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Netflix Auto Skip Intro & Recap",
+    "version": "1.0",
+    "description": "Automatically skip intros and recaps on Netflix.",
+    "permissions": ["notifications", "activeTab", "storage", "scripting" ],
+    "content_scripts": [{"matches": ["https://www.netflix.com/*"],
+                         "js": ["content.js"]}],
+    "background": {"service_worker": "background.js"},
+    "action": {"default_icon": {"16": "icons/icon_16.png",
+                                "48": "icons/icon_48.png",
+                                "128": "icons/icon_128.png"},
+               "default_popup": "popup/popup.html",
+               "default_title": "Netflix Auto Skip"},
+    "icons": {"16": "icons/icon_16.png",
+              "48": "icons/icon_48.png",
+              "128": "icons/icon_128.png"}
+}
