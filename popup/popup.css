@@ -1,15 +1,18 @@
 :root {
-	--off-bg: #ffffff75;
-	--on-bg: #6b6b6b75;
-	--transition: all 0.1s ease;
-	--off-trail: #595959;
-	--on-trail: #e5e5e5;
-	--icon-color: var(--off-trail);
+	--off-bt: #9f9f9f;
+	--on-bt: white;
+	--bg: rgb(33, 39, 42);
+	--text: var(--bg);
+	--transition: ease-out 1s;
 }
 
 body {
-	padding: 0;
-	margin: 0;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	background-color: var(--bg);
+	gap: 3px;
+	min-width:50px;
 }
 
 /* Hide the input */
@@ -19,49 +22,24 @@ input[type="checkbox"] {
 	z-index: -1;
 }
 
-.switch-trail {
-	display: flex;
-	width: 	3rem;
-	height: 1rem;
-	padding: 0.25rem;
-	margin: 0.2rem;
-	background: var(--off-trail);
-	transition: var(--transition);
-	border-radius: 1rem;
-	cursor: pointer;
-	position: relative;
-}
-
-.switch-handler {
-	display: flex;
-	justify-content: center;
+.switch {
+	text-align: center;
 	align-items: center;
-	width: 1rem;
-	height: 1rem;
-	position: relative;
-	background: var(--off-bg);
-	border-radius: 50%;
+	justify-content: center;
 	transition: var(--transition);
+	cursor: pointer;
+	width: 100%;
+	border-radius: 5px;
+	font-size: 1em;
+	color: var(--text);
+	font-family: Arial;
+
+
+	background: linear-gradient(to right, var(--on-bt) 50%, var(--off-bt) 50%);
+	background-position: 100% 0;
+	background-size: 200% 100%;
 }
 
-input[type="checkbox"]:checked + .switch-trail {
-    background: var(--on-trail);
-}
-
-input[type="checkbox"]:checked + .switch-trail .switch-handler {
-    --icon-color: var(--on-trail);
-    margin-left: 2rem;
-    background: var(--on-bg);
-}
-
-/* Add text overlay using data-label attribute */
-.switch-trail::before {
-    content: attr(data-label);
-    position: absolute;
-    top: 45%;
-    left: 45%;
-    transform: translate(-50%, -50%);
-    color: rgb(0, 0, 0);
-    font-size: 0.7rem;
-	pointer-events: none; /* Ensure text does not interfere with click */
+input[type="checkbox"]:checked+.switch {
+	background-position: 0 0;
 }

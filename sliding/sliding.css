@@ -1,3 +1,8 @@
+:root {
+	--off-bt: #9f9f9f;
+	--on-bt: white;
+}
+
 @keyframes slideEffect {
     0% {
         background-position: 100% 0;
@@ -7,8 +12,9 @@
     }
 }
 
+
 .button-slide-effect {
-    background: linear-gradient(to right, white 50%, rgb(159, 159, 159) 50%);
+    background: linear-gradient(to right, var(--on-bt) 50%, var(--off-bt) 50%);
     background-size: 200% 100%;
     animation: slideEffect 5s forwards;
 }
