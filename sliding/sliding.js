@@ -21,7 +21,7 @@ function applySlideEffectAndAutoClick(button) {
     let timerId = setTimeout(() => {
         button.click();
         console.log('button clicked');
-    }, 5100);
+    }, 5000);
 
     function removeAnimationAndTimer() {
         button.classList.remove('button-slide-effect');
@@ -32,6 +32,10 @@ function applySlideEffectAndAutoClick(button) {
 
     setTimeout(() => {
         document.addEventListener('mousemove', removeAnimationAndTimer);
-    }, 500);
+    }, 800);
+
+    setTimeout(() => {
+        document.removeEventListener('mousemove', removeAnimationAndTimer);
+    }, 5000);
 
 }
