@@ -5,7 +5,7 @@ Give the same auto-skip ability to the Netflix recap and intro buttons as seen o
 Unpacked extension for Chromium based browsers.
 
 ## Installation
-1. Pull the repository with
+1. [Download](https://github.com/Egoago/netflix-auto-skip/archive/refs/heads/main.zip) the repository as a .zip file or pull with  
 ```bash
 git clone https://github.com/Egoago/netflix-auto-skip.git
 ```
@@ -13,7 +13,7 @@ git clone https://github.com/Egoago/netflix-auto-skip.git
 2. Go to **brave://extensions/** or **chrome://extensions/**.
 3. Enable *Developer mode*.
 4. Click on *Load unpacked*.
-5. Select the path where the repository was loaded.
+5. Select the path where the repository was downloaded (and extracted).
 6. Enjoy.
 
 
