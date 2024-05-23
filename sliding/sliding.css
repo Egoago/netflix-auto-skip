@@ -4,10 +4,10 @@
 }
 
 @keyframes slideEffect {
-    0% {
+    from {
         background-position: 100% 0;
     }
-    100% {
+    to {
         background-position: 0 0;
     }
 }
@@ -16,5 +16,5 @@
 .button-slide-effect {
     background: linear-gradient(to right, var(--on-bt) 50%, var(--off-bt) 50%);
     background-size: 200% 100%;
-    animation: slideEffect 5s forwards;
+    animation: slideEffect 4s forwards linear;
 }
